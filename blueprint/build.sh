@@ -81,13 +81,12 @@ sed -e 's/\[mermaid\]/[mermaid, format=svg]/g' main.adoc > main-svg.adoc
 echo "Generating HTML..."
 asciidoctor ${ASCIIDOC_ARGS} main-svg.adoc -o blueprint.html
 
-# echo "Generating PDF..."
-# asciidoctor-pdf ${ASCIIDOC_ARGS} main.adoc --out-file blueprint.pdf
+echo "Generating PDF..."
+asciidoctor-pdf ${ASCIIDOC_ARGS} main.adoc --out-file blueprint.pdf
 
 mkdir -p ../build_outputs_folder/blueprint
 cp blueprint.html ../build_outputs_folder/blueprint/blueprint.html
+cp blueprint.pdf ../build_outputs_folder/blueprint/blueprint.pdf
 for IMAGE in $(find . -maxdepth 1 -name "*.png") $(find . -maxdepth 1 -name "*.svg") $(find . -maxdepth 1 -name "*.jpg"); do
     cp ${IMAGE} ../build_outputs_folder/blueprint/
 done
-
-# cp blueprint.pdf ../build_outputs_folder/blueprint/blueprint.pdf
