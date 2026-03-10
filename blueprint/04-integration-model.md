@@ -1,13 +1,8 @@
 # How the Wallet Interacts with Services
-Todo:
- - EBW: the issuing we do
- - This chapter describes the general **WE BUILD PID/EBWOID issuing process** in a sequence diagram.
- - Mention ETSI standardization: ETSI TS 119 472-3 for (Q)EAA and PID issuance. ETSI TS 119 476-3 will standardize WUA and WIA.
- - High-Level Flows - Revocation and status checking
- - PID issuing
+
+In the interaction flows described in this chapter, the conceptual actors introduced in the previous chapter are represented by their corresponding system components. In particular, the holder is represented by the wallet application used to store and present attestations.
 
 ## Interaction Pattern: Attestation Issuance
-To be authored by Group 6 (QTSP) and Group 7 (Wallets). Focuses on how use cases get data into the wallet (e.g., PID or QEAA) using protocols like OpenID4VCI (but no need to mention that part, stuff like that should be mainly in CS). 
 
 The [WE BUILD Consortium Conformance Specification (CS)](https://github.com/webuild-consortium/wp4-architecture/blob/blueprint/updates-jan/conformance-specs/cs-01-credential-issuance.md) for high-assurance credential issuance defines the requirements that will be applied within the WE BUILD project to ensure that Wallet Units and Credential Issuers across the WE BUILD ecosystem interoperate reliably and consistently when issuing verifiable digital credentials, with strong security guarantees and privacy protections.
 
@@ -84,10 +79,10 @@ User->>Wallet: Accesses the credential
 
 ## Interaction Pattern: Attestation Presentation (Receiving) 
 
-The [WE BUILD Conformance Specification for Credential Presentation](https://github.com/webuild-consortium/wp4-architecture/blob/blueprint/updates-jan/conformance-specs/cs-02-credential-presentation.md) describes how Wallet Units (WU) and Verifiers interoperate within the WE BUILD ecosystem. It covers presentation (request and response flows), interfaces between wallets and verifiers as well as security, privacy and interoperability requirements and same‑device and cross‑device invocation patterns
+The [WE BUILD Conformance Specification for Credential Presentation](https://github.com/webuild-consortium/wp4-architecture/blob/blueprint/updates-jan/conformance-specs/cs-02-credential-presentation.md) describes how wallets and relying parties interoperate within the WE BUILD ecosystem. It covers presentation (request and response flows), interfaces between wallets and relying parties as well as security, privacy and interoperability requirements and same‑device and cross‑device invocation patterns
 
 ## Signature and Seal Integration
-WE BUILD supports both wallet-centric and QTSP-operated approaches for electronic signatures and seals. In both models the wallet provides the user interaction layer, while cryptographic operations may take place either locally or in remote infrastructure operated by a Qualified Trust Service Provider (QTSP).
+WE BUILD supports both wallet-centric and QTSP-operated approaches for electronic signatures and seals. In both models the wallet provides the user interaction layer, while cryptographic operations may take place either locally or in remote infrastructure operated by a QTSP.
 
 Both approaches are compatible with the architectural patterns described in the ARF. However, during the WE BUILD pilot phase not every wallet provider or QTSP is expected to implement every possible model. For interoperability across the consortium, WE BUILD therefore treats remote signing and sealing through QTSP-managed services with standardized interfaces as the common baseline. This reflects the current pilot scoping, which focuses on remote transaction flows. Local signing models may still be supported by individual wallet implementations, but they are not assumed as a uniform baseline for interoperability within the project.
 
