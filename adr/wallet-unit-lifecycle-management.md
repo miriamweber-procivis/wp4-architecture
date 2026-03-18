@@ -38,7 +38,7 @@ The European Business Wallet SHALL introduce:
 
 A Wallet Unit Attestation is a signed object issued by the Wallet Provider that:
 
-- Binds the Wallet Unit to a secure cryptographic environment.
+- Binds the Wallet Unit to a secure cryptographic environment. <-- can you please clarify what this means in light of a server wallet.
 - Contains public keys used for credential binding.
 - Includes validity and revocation information.
 - Is presented to Issuers and Attestation Providers.
@@ -113,3 +113,4 @@ Once merged, this is our consortium’s decision. This does not mean all partici
 2026-02-11, George Padayatti, iGrant.io, Sweden
 2026-02-12, George Fourtounis, GRNET, Greece
 2026-02-12, Malin Norlander, Bolagsverket, Sweden
+2026-03-18;Miriam Weber, Procivis, Austria
